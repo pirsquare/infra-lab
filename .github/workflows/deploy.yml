@@ -30,7 +30,7 @@ jobs:
       packages: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Log in to GHCR
         uses: docker/login-action@v3
@@ -65,7 +65,7 @@ jobs:
       ECR_REPOSITORY: ${{ secrets.AWS_ECR_REPOSITORY }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -101,7 +101,7 @@ jobs:
       GCP_AR_REPOSITORY: ${{ secrets.GCP_AR_REPOSITORY }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Auth to Google Cloud
         uses: google-github-actions/auth@v2
@@ -138,7 +138,7 @@ jobs:
       packages: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Log in to GHCR
         uses: docker/login-action@v3
