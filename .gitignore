@@ -55,3 +55,11 @@ node_modules/
 
 # Kubernetes local overrides
 k8s/*.local.yaml
+
+# Terraform
+terraform/**/.terraform/
+terraform/**/*.tfstate
+terraform/**/*.tfstate.*
+terraform/**/.terraform.lock.hcl
+terraform/**/*.tfvars
+!terraform/**/example.tfvars

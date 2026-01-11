@@ -211,3 +211,10 @@ Or add platforms like Fly.io or Render.
 ## License
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
+## Infrastructure as Code (Terraform)
+See [terraform/README.md](terraform/README.md) for infrastructure setup using Terraform. Includes configurations for:
+- Azure Web App for Containers
+- AWS ECS (Fargate)
+- GCP Cloud Run
+- Kubernetes (via Terraform provider)
+

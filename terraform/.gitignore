@@ -1,0 +1,22 @@
+# Terraform state
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Terraform cache
+.terraform/
+
+# Plan files
+*.tfplan
+
+# Credential files
+*.pem
+*.ppk
+terraform.tfvars
+terraform.tfvars.json
+*.auto.tfvars
+
+# IDE
+.vscode/
+.idea/
+*.swp
