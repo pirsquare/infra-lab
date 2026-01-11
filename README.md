@@ -21,7 +21,7 @@ Production-ready FastAPI template with cloud-agnostic CI/CD and Infrastructure a
 ```bash
 # Clone and install
 git clone https://github.com/pirsquare/infra-lab.git
-cd fastapi-cloud-deploy
+cd infra-lab
 make install-deps
 
 # Run locally
