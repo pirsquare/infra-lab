@@ -10,7 +10,7 @@
 
 ### 1. Clone and Install
 ```bash
-git clone https://github.com/YOUR_ORG/infra-lab.git
+git clone https://github.com/pirsquare/infra-lab.git
 cd infra-lab
 make install-deps
 make install-hooks

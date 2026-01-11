@@ -1,7 +1,7 @@
 # FastAPI Cloud Deploy
 
-[![CI](https://github.com/YOUR_ORG/YOUR_REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_ORG/YOUR_REPO/actions/workflows/ci.yml)
-[![Deploy](https://github.com/YOUR_ORG/YOUR_REPO/actions/workflows/deploy.yml/badge.svg)](https://github.com/YOUR_ORG/YOUR_REPO/actions/workflows/deploy.yml)
+[![CI](https://github.com/pirsquare/infra-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/pirsquare/infra-lab/actions/workflows/ci.yml)
+[![Deploy](https://github.com/pirsquare/infra-lab/actions/workflows/deploy.yml/badge.svg)](https://github.com/pirsquare/infra-lab/actions/workflows/deploy.yml)
 
 Production-ready FastAPI template with cloud-agnostic CI/CD and Infrastructure as Code support for **Azure**, **AWS**, **GCP**, and **Kubernetes**.
 
@@ -22,7 +22,7 @@ Production-ready FastAPI template with cloud-agnostic CI/CD and Infrastructure a
 ### 1. Local Development
 ```bash
 # Clone and install
-git clone https://github.com/YOUR_ORG/YOUR_REPO.git
+git clone https://github.com/pirsquare/infra-lab.git
 cd fastapi-cloud-deploy
 make install-deps
 make install-hooks
@@ -264,8 +264,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 ## Support
 
 - 📖 [Documentation](docs/)
-- 🐛 [Issues](https://github.com/YOUR_ORG/YOUR_REPO/issues)
-- 💬 [Discussions](https://github.com/YOUR_ORG/YOUR_REPO/discussions)
+- 🐛 [Issues](https://github.com/pirsquare/infra-lab/issues)
+- 💬 [Discussions](https://github.com/pirsquare/infra-lab/discussions)
 
 ## Acknowledgments
 
