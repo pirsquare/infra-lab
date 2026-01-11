@@ -35,8 +35,8 @@ variable "tags" {
   description = "Common tags for all resources"
   type        = map(string)
   default = {
-    project     = "fastapi-cloud"
-    managed_by  = "terraform"
-    created_at  = "2026-01-12"
+    project    = "fastapi-cloud"
+    managed_by = "terraform"
+    created_at = "2026-01-12"
   }
 }
