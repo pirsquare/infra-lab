@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: infra-lab
+  labels:
+    app: infra-lab
+spec:
+  type: ClusterIP
+  selector:
+    app: infra-lab
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8000

@@ -1,0 +1,57 @@
+
+*.pem
+*.ppk
+*.cert
+*.key
+*.crt
+secret_vars.yml
+*.p12
+.idea
+*.sublime-workspace*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# Packaging / Build
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Testing / Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Type/Lint caches
+.mypy_cache/
+.pytype/
+.ruff_cache/
+.cache/
+
+# Editors / OS
+.vscode/
+Thumbs.db
+Desktop.ini
+
+# Logs and env files
+*.log
+.env
+.env.*
+
+# Node (optional, if used later)
+node_modules/
+
+# Kubernetes local overrides
+kubernetes/*.local.yaml

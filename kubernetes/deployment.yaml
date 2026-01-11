@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: infra-lab
+  labels:
+    app: infra-lab
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: infra-lab
+  template:
+    metadata:
+      labels:
+        app: infra-lab
+    spec:
+      containers:
+        - name: app
+          # Image will be updated by the workflow step `kubectl set image`
+          image: ghcr.io/example/placeholder:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
