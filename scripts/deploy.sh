@@ -18,15 +18,15 @@ esac
 
 case "$ACTION" in
   plan)
-    terraform init
-    terraform plan
+    terraform init || exit 1
+    terraform plan || exit 1
     ;;
   apply)
-    terraform init
-    terraform apply
+    terraform init || exit 1
+    terraform apply -auto-approve || exit 1
     ;;
   destroy)
-    terraform destroy
+    terraform destroy -auto-approve || exit 1
     ;;
   *)
     echo "Usage: $0 {azure|aws|gcp|kubernetes} {plan|apply|destroy}"

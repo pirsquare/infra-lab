@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: infra-lab
+  name: fastapi-app
   labels:
-    app: infra-lab
+    app: fastapi-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: infra-lab
+      app: fastapi-app
   template:
     metadata:
       labels:
-        app: infra-lab
+        app: fastapi-app
     spec:
       containers:
         - name: app
