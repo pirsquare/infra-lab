@@ -4,7 +4,7 @@
 - Python 3.10+
 - Docker (for local container testing)
 - Terraform 1.0+ (for infrastructure)
-- Git and pre-commit
+- Git
 
 ## Local Environment Setup
 
@@ -13,7 +13,6 @@
 git clone https://github.com/pirsquare/infra-lab.git
 cd infra-lab
 make install-deps
-make install-hooks
 ```
 
 ### 2. Create Virtual Environment
@@ -41,23 +40,6 @@ Visit http://localhost:8000 and http://localhost:8000/docs for API docs.
 Run the test suite:
 ```bash
 make test
-```
-
-With coverage:
-```bash
-pytest --cov=src tests/
-```
-
-## Linting and Formatting
-
-Check for issues:
-```bash
-make lint
-```
-
-Auto-fix formatting:
-```bash
-make format
 ```
 
 ## Docker Local Testing
@@ -102,25 +84,11 @@ export TF_LOG=DEBUG
 terraform plan
 ```
 
-## Pre-commit Hooks
-
-Run hooks manually:
-```bash
-pre-commit run --all-files
-```
-
-Update hooks:
-```bash
-pre-commit autoupdate
-```
-
 ## Common Tasks
 
 | Task | Command |
 |------|---------|
 | Run tests | `make test` |
-| Check style | `make lint` |
-| Format code | `make format` |
 | Build Docker | `docker build -t fastapi-app:local .` |
 | Run locally | `uvicorn src.main:app --reload` |
 | Validate Terraform | `make init target=kubernetes` |

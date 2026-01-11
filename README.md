@@ -9,12 +9,10 @@ Production-ready FastAPI template with cloud-agnostic CI/CD and Infrastructure a
 
 - ✅ **FastAPI** with async support
 - ✅ **Multi-cloud** deployment (Azure, AWS, GCP, Kubernetes)
-- ✅ **GitHub Actions** CI/CD with automated testing and security scanning
+- ✅ **GitHub Actions** CI/CD with automated testing
 - ✅ **Terraform** Infrastructure as Code for reproducible deployments
-- ✅ **Docker** containerization with security best practices
-- ✅ **Pre-commit hooks** for code quality (Black, flake8, tfsec)
+- ✅ **Docker** containerization
 - ✅ **Comprehensive docs** (DEPLOY, DEVELOPMENT, CONTRIBUTING)
-- ✅ **Security scanning** (Trivy, tfsec)
 - ✅ **Makefile** for common tasks
 
 ## Quick Start
@@ -25,7 +23,6 @@ Production-ready FastAPI template with cloud-agnostic CI/CD and Infrastructure a
 git clone https://github.com/pirsquare/infra-lab.git
 cd fastapi-cloud-deploy
 make install-deps
-make install-hooks
 
 # Run locally
 uvicorn src.main:app --reload
@@ -36,7 +33,6 @@ Visit http://localhost:8000
 ### 2. Run Tests
 ```bash
 make test
-make lint
 ```
 
 ### 3. Deploy
@@ -96,9 +92,6 @@ Requires: `KUBE_CONFIG`
 
 ### Continuous Integration (`.github/workflows/ci.yml`)
 - **Tests**: Python 3.10, 3.11, 3.12
-- **Linting**: flake8, tflint, tfsec
-- **Security**: Trivy vulnerability scanning
-- **Terraform**: Format and validation checks
 
 Runs on: Push to any branch, Pull requests
 
@@ -149,49 +142,13 @@ See [DEPLOY.md](DEPLOY.md) for detailed setup instructions.
 ```bash
 make help                # List all available commands
 make install-deps        # Install Python and Terraform deps
-make install-hooks       # Install pre-commit hooks
 make test                # Run tests
-make lint                # Run linters
-make format              # Auto-format code
 make init target=<env>   # Initialize Terraform
 make plan target=<env>   # Plan Terraform deployment
 make apply target=<env>  # Apply Terraform deployment
 make destroy target=<env> # Destroy infrastructure
 make clean               # Clean build artifacts
 ```
-
-## Development
-
-### Python Style
-- **Formatter**: Black (line length: 100)
-- **Import sorter**: isort
-- **Linter**: flake8
-- **Pre-commit hooks**: Enabled by default
-
-### Terraform Style
-- **Formatter**: `terraform fmt`
-- **Linter**: tflint with all rules
-- **Security**: tfsec scanning
-
-### Pre-commit
-Hooks run automatically on `git commit`. To run manually:
-```bash
-pre-commit run --all-files
-```
-
-## Security
-
-### Container Scanning
-Trivy scans container images for vulnerabilities during CI.
-
-### Terraform Security
-tfsec checks for common Terraform security issues.
-
-### Dependency Updates
-Dependabot monitors and creates PRs for:
-- Python (pip)
-- Terraform providers
-- GitHub Actions
 
 ## Testing
 
@@ -201,9 +158,6 @@ make test
 
 # Run specific test file
 pytest tests/test_app.py
-
-# With coverage
-pytest --cov=src tests/
 ```
 
 ## Customization
