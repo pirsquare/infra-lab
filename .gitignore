@@ -54,4 +54,4 @@ Desktop.ini
 node_modules/
 
 # Kubernetes local overrides
-kubernetes/*.local.yaml
+k8s/*.local.yaml

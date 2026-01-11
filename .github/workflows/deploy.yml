@@ -165,7 +165,7 @@ jobs:
           echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
 
       - name: Apply manifests
-        run: kubectl apply -f kubernetes/
+        run: kubectl apply -f k8s/
 
       - name: Update deployment image
         run: kubectl set image deployment/infra-lab app=ghcr.io/${{ env.IMAGE_NAME }}:${{ inputs.image_tag }}

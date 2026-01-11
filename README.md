@@ -133,11 +133,11 @@ Kubernetes (generic):
 
 ### Kubernetes Manifests
 Included manifests:
-- [kubernetes/deployment.yaml](kubernetes/deployment.yaml)
-- [kubernetes/service.yaml](kubernetes/service.yaml)
+- [k8s/deployment.yaml](k8s/deployment.yaml)
+- [k8s/service.yaml](k8s/service.yaml)
 
 The workflow runs:
-- `kubectl apply -f kubernetes/`
+- `kubectl apply -f k8s/`
 - `kubectl set image deployment/infra-lab app=ghcr.io/<owner>/<repo>:<tag>`
 
 If your cluster requires private image pull from GHCR, create an imagePullSecret and attach it to the default service account (or to the deployment):
@@ -151,7 +151,7 @@ kubectl create secret docker-registry ghcr-creds \
 kubectl patch serviceaccount default \
 	-p '{"imagePullSecrets":[{"name":"ghcr-creds"}]}'
 ```
-Alternatively, add `imagePullSecrets` under `spec.template.spec` in the deployment manifest.
+Alternatively, add `imagePullSecrets` under `spec.template.spec` in [k8s/deployment.yaml](k8s/deployment.yaml).
 
 ### Example Setup Commands
 
