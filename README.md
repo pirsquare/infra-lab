@@ -58,34 +58,6 @@ terraform apply -var-file=terraform.tfvars
 
 See [DEPLOY.md](DEPLOY.md) for detailed deployment guides.
 
-## Project Structure
-
-```
-.
-├── src/                       # Application source code
-│   └── main.py               # FastAPI app entry point
-├── tests/                     # Test suite
-├── k8s/                       # Kubernetes manifests
-│   ├── deployment.yaml
-│   └── service.yaml
-├── terraform/                 # Infrastructure as Code
-│   ├── variables.tf
-│   ├── main.tf
-│   ├── azure/
-│   ├── aws/
-│   ├── gcp/
-│   └── kubernetes/
-├── .github/workflows/         # GitHub Actions
-│   ├── ci.yml                # Testing and security scanning
-│   └── deploy.yml            # Multi-cloud deployment
-├── scripts/                   # Helper scripts
-├── Dockerfile                # Container image
-├── Makefile                  # Common tasks
-├── requirements.txt          # Python dependencies
-├── .pre-commit-config.yaml   # Pre-commit hooks
-└── README.md                 # This file
-```
-
 ## Deployment Targets
 
 ### Azure Web App for Containers
@@ -118,7 +90,6 @@ Requires: `KUBE_CONFIG`
 |----------|---------|
 | [DEPLOY.md](DEPLOY.md) | Step-by-step deployment guides for all targets |
 | [DEVELOPMENT.md](DEVELOPMENT.md) | Local development setup and debugging |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines and workflow |
 | [terraform/README.md](terraform/README.md) | Terraform-specific documentation |
 
 ## CI/CD Pipeline
