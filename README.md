@@ -260,18 +260,3 @@ Licensed under MIT. See [LICENSE](LICENSE) for details.
 
 ## Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## Support
-
-- 📖 [Documentation](docs/)
-- 🐛 [Issues](https://github.com/pirsquare/infra-lab/issues)
-- 💬 [Discussions](https://github.com/pirsquare/infra-lab/discussions)
-
-## Acknowledgments
-
-Built with:
-- [FastAPI](https://fastapi.tiangolo.com/)
-- [Terraform](https://www.terraform.io/)
-- [Docker](https://www.docker.com/)
-- [GitHub Actions](https://github.com/features/actions)
-
