@@ -124,7 +124,7 @@ jobs:
           tags: ${{ env.GCP_REGION }}-docker.pkg.dev/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_AR_REPOSITORY }}/${{ env.IMAGE_NAME }}:${{ inputs.image_tag }}
 
       - name: Deploy to Cloud Run
-        uses: google-github-actions/deploy-cloudrun@v2
+        uses: google-github-actions/deploy-cloudrun@v3
         with:
           service: ${{ secrets.CLOUD_RUN_SERVICE }}
           region: ${{ env.GCP_REGION }}
